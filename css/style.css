@@ -1,0 +1,119 @@
+@keyframes logoAnimate {
+  from {
+    width: 250px;
+    height: 250px;
+  }
+  to {
+    width: 350px;
+    height: 350px;
+  }
+  0% {
+    width: 250px;
+    height: 250px;
+  }
+  50% {
+    width: 350px;
+    height: 350px;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(45deg, rgba(19, 19, 19, 0.856), rgba(19, 19, 19, 0.856)), url("../img/bgc.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.container .woman {
+  position: absolute;
+  bottom: 0%;
+  left: -5%;
+  transform: translateY(-5%, 0%);
+  height: 850px;
+  width: 850px;
+  background-image: url("../img/GTA_V_Artwork_BeachBum_PNG.png");
+  background-size: cover;
+  background-position: center;
+}
+.container .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 250px;
+  background-image: url("../img/EntryRP_logo.png");
+  background-size: cover;
+  background-position: center;
+  animation: logoAnimate 2.5s infinite;
+}
+.container .hidden {
+  display: none;
+}
+.container .link {
+  position: relative;
+  padding: 10px 20px;
+  margin: 0 20px;
+  font-size: 48px;
+  color: #f8f8f8;
+  text-decoration: none;
+}
+.container .link:hover {
+  cursor: none;
+}
+.container .link,
+.container .link::after,
+.container .link::before {
+  transition: 0.6s;
+}
+.container .two {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+  transform: translate(-1%, -2%);
+}
+.container .two::before,
+.container .two::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.container .two::before {
+  top: -2px;
+  left: -8px;
+  border-top: 0px solid #fff;
+  border-left: 0px solid #fff;
+}
+.container .two::after {
+  bottom: -2px;
+  right: -8px;
+  border-bottom: 0px solid #fff;
+  border-right: 0px solid #fff;
+}
+.container .two:hover::before,
+.container .two:hover::after {
+  width: 50px;
+  height: 50%;
+}
+.container .two:hover::before {
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.container .two:hover::after {
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}/*# sourceMappingURL=style.css.map */
